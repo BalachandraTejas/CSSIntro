@@ -1,0 +1,231 @@
+/* My Stylesheet
+
+- Base Styles
+- navbar 
+- Grid
+- Hero
+- Content
+- Sidebar
+- Footer
+- Media Queries */
+
+
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*Box sizing :
+Follows the border-box model. Alternative is content-box*/
+
+* {
+  box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+html {
+  font-size: 16px;
+}
+body {
+  font-weight: 400;
+  font-family: "OpenSans",  "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+header,
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+header,
+.container:after {
+    content:"";
+    display:table;
+    clear:both;
+}
+
+/* navbar 
+--------------------------------------------------*/
+nav:after {
+    content:"";
+    display:table;
+    clear:both;
+}
+.mobile-nav {
+    display: none;
+}
+.nav ul,
+.mobile-nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav li {
+    width: 20%;
+    text-align: center;
+    float: left;
+    list-style: none;
+}
+
+nav a {
+    display:table;
+    padding: 25px;
+    text-align: center;
+    width: 100%;
+    text-decoration: none;
+    color: #222;
+}
+nav li a:hover {
+    background-color: #888900;/*#EF5C08;*/
+    color: white;
+}
+nav .logo {
+    font-size: 2em;
+    font-weight: 600;
+    margin-top: -1%;
+}
+nav .logo img {
+    width: 100%;
+}
+nav .logo a{
+    padding: 0;
+}
+/* when mobile nav is visible then this would apply: */
+.mobile-nav {
+    text-align: center;
+    padding-bottom: 20px;
+}
+.mobile-nav li {
+    width: 50%;
+}
+.mobile-nav .logo {
+    width: 100%;
+}
+.mobile-nav a {
+    display: block;
+    border: 1px solid #eee;
+    margin: 1%;
+}
+.mobile-nav .logo a{
+    background-color: transparent;
+    width: 200px;
+    margin: 0 auto;
+    max-width: 200px;
+    border: none;
+}
+
+/* Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.content {
+  width: 65%;
+  float: left;
+  border: 1px solid #eee;
+}
+
+.sidebar {
+    width: 33%;
+    float: left;
+    border: 1px solid #eee;
+    margin-left: 2%;
+}
+
+/*Hero 
+-----------------------------------------------------*/
+.hero img{
+    width: 100%;
+}
+.hero {
+    margin-bottom: 20px;
+}
+
+
+/*Content
+------------------------------------------------------*/
+figcaption {
+    font-size: 12px;
+}
+figure {
+    float: left;
+}
+article {
+    border-bottom: 1px solid #eee;
+}
+article:after {
+    content:"";
+    display:table;
+    clear:both;
+}
+article h2 {
+    padding-top: 12px;
+    padding-left: 16px;
+}
+article p {
+    padding-right: 16px;
+    padding-left: 16px;
+    line-height: 1.6;
+}
+.btn-read-more {
+    background-color: #888900;
+    color: white;
+    padding: 2%;
+    cursor: pointer;   
+    float: right;
+    margin-right: 5%;
+    border: none;
+}
+.btn-read-more {
+    border: 2px solid greenyellow; 
+}
+
+/* Sidebar 
+-------------------------------------------------*/
+.sidebar {
+    font-size: 14px;
+}
+.sidebar article p {
+    padding-top: 12px;
+    line-height: 1.4;
+}
+
+/*Footer
+-------------------------------------------------- */
+footer {
+    text-align: center;
+    background-color: #362E23;
+    color: white;
+    margin-top: 20px;
+    padding: 2%;
+}
+.footer-links:after {
+    content:"";
+    display:table;
+    clear:both;
+}
+.footer-links div{
+    width: 33.3333%;
+    float: left;
+    
+}
+.footer-links div a {
+    display: block;
+    color: whitesmoke;
+    padding: 1%;
+}
+.copyright {
+    padding-top: 4%;
+}
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Smaller than tablet */
+@media (max-width: 750px) {
+    .nav {
+        display: none;
+    }
+    .mobile-nav {
+        display: block;
+    }    
+    .content {
+      width: 100%;
+      float: left;
+      border: 1px solid #eee;
+    }
+    .sidebar {
+        width: 100%;
+    }
+}
